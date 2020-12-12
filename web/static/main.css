@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
+    background:#000;
+    font-size:16px;
+}
+
+p{
+    font-weight: 300;
+}
+
+.main{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+}
+
+.header{
+    margin-top:8rem;
+    color:#fff;
+}
+
+.header p{
+    margin-top:1rem;
+    text-align:center;
+}
+
+.buttons{
+    margin-top:2rem;
+    display:flex;
+    justify-content:center;
+}
+
+button{
+    padding: .75rem 1.25rem;
+    border-radius:0;
+    border:none;
+    margin: 0 .5rem;
+    cursor: pointer;
+}
+
+.btn-primary{
+    background:#0f62fe;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#0043ce;
+}
+
+.btn-secondary{
+    color:#000;
+    background:#fff;
+}
+
+.btn-secondary:hover{
+    background:#efefef;
+}
+
+h1{
+    font-size:80px;
+    color:#fff;
+}
+
+.goimage{
+    width:400px;
+    position:fixed;
+    bottom:-300px;
+}
+
+.goimage img{
+    width:100%;
+}
