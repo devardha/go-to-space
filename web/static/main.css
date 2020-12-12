@@ -7,6 +7,7 @@ body{
     font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,'Fira Sans','Droid Sans','Helvetica Neue',sans-serif;
     background:#000;
     font-size:16px;
+    overflow-y:hidden;
 }
 
 p{
@@ -23,6 +24,10 @@ p{
 .header{
     margin-top:8rem;
     color:#fff;
+}
+
+.header h1{
+    text-align: center;
 }
 
 .header p{
@@ -69,10 +74,17 @@ h1{
 
 .goimage{
     width:400px;
-    position:fixed;
+    position:absolute;
     bottom:-300px;
 }
 
 .goimage img{
     width:100%;
+}
+
+@media(max-width:768px){
+    .goimage{
+        width:300px;
+        bottom:-200px;
+    }
 }

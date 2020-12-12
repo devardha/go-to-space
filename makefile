@@ -5,4 +5,4 @@ build: main.go
 	go build -o bin/gotospace main.go
 
 clean:
-	rm rf bin
+	rm -rf bin
