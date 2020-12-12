@@ -51,7 +51,7 @@ func main() {
 	r := gin.Default()
 
 	port := os.Getenv("PORT")
-	//port := "5000"
+	fmt.Println("PORT: " + port)
 
 	if port == "" {
 		log.Fatal("$PORT must be set")
@@ -65,8 +65,6 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(200, "maintemplate.gohtml", gin.H{"status": "OK"})
 	})
-
-	// Api Routes
 
 	// Run server
 	fmt.Println("Server running")
