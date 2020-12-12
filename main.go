@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/devardha/gotospace/api"
 	"github.com/devardha/gotospace/models"
 	"github.com/gin-gonic/gin"
 )
@@ -29,6 +30,10 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(200, "maintemplate.gohtml", gin.H{"status": "200"})
 	})
+
+	// Api Routes
+	// Api Routes
+	api.ApplyRoutes(r)
 
 	// Run server
 	fmt.Println("Server running")
