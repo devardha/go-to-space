@@ -50,8 +50,8 @@ func main() {
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 
-	//port := os.Getenv("PORT")
-	port := "5000"
+	port := os.Getenv("PORT")
+	//port := "5000"
 
 	if port == "" {
 		log.Fatal("$PORT must be set")
