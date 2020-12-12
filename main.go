@@ -15,10 +15,7 @@ var db *gorm.DB //database
 
 // GetEnv - get variables from .env
 func GetEnv(name string) string {
-	err := godotenv.Load(".env")
-	if err != nil {
-		log.Fatal("Cannot load .env file")
-	}
+	godotenv.Load(".env")
 
 	return os.Getenv(name)
 }
@@ -26,11 +23,7 @@ func GetEnv(name string) string {
 // ConnectToDb - initializes the ORM and Connection to the postgres DB
 func ConnectToDb() {
 	dsn := GetEnv("CONNECTION_STRING")
-	conn, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
-
-	if err != nil {
-		log.Fatal(err)
-	}
+	conn, _ := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
 	if conn != nil {
 		fmt.Println("Database connected")
