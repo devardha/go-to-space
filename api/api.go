@@ -14,6 +14,10 @@ func ApplyRoutes(r *gin.Engine) {
 		api.GET("/galaxies", handlers.GetGalaxies())
 		api.GET("/galaxies/:id", handlers.GetGalaxy())
 
+		api.POST("/galaxies", handlers.AddGalaxy())
+		api.DELETE("/galaxies/:id", handlers.DeleteGalaxy())
+		api.PUT("/galaxies/:id", handlers.UpdateGalaxy())
+
 		// Star routes
 		api.GET("/stars", handlers.GetStars())
 		api.GET("/stars/:id", handlers.GetStar())

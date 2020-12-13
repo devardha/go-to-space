@@ -49,8 +49,9 @@ func GetStar() gin.HandlerFunc {
 // AddStar (add new star) - POST
 func AddStar() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		var input StarInput
 		database := models.GetDB()
+
+		var input StarInput
 		if err := c.ShouldBindJSON(&input); err != nil {
 			c.JSON(400, gin.H{"data": err.Error()})
 			return
