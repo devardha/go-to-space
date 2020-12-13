@@ -2,7 +2,7 @@ package models
 
 // Star - database model for star
 type Star struct {
-	ID            uint    `json:"id" gorm:"primaryKey"`
+	ID            uint    `json:"id" gorm:"autoIncrement:true;primaryKey"`
 	Name          string  `json:"name" gorm:"size:64"`
 	Constellation string  `json:"constellation" gorm:"size:128"`
 	Luminosity    float32 `json:"luminosity" gorm:"digits:32"`

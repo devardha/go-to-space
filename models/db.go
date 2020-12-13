@@ -28,7 +28,7 @@ func ConnectToDb() {
 	}
 
 	db = conn
-	db.Debug().AutoMigrate() //Database migration
+	db.Debug().AutoMigrate(&Star{}, &Galaxy{}) //Database migration
 }
 
 // GetDB - get database object
